@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Mensiv</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <section id="slide1">
+
+    <div id="sticker-container"></div>
+
+    <button id="addStickerBtn">
+      + Add Sticker
+    </button>
+
+    <div id="stickerPicker" class="hidden">
+      <img src="stickers/sticker1.png" class="pick-sticker">
+      <img src="stickers/sticker2.png" class="pick-sticker">
+      <img src="stickers/sticker3.png" class="pick-sticker">
+      <img src="stickers/sticker4.png" class="pick-sticker">
+    </div>
+
+  </section>
+
+<section id="slide2">
+
+  <audio id="song">
+    <source src="music/oursong.mp3" type="audio/mpeg">
+  </audio>
+
+  <button id="playBtn"></button>
+
+</section>
+
+<section id="slide3">
+  <button
+  id="openLettersBtn"
+  onclick="document.getElementById('slide4').style.display='block'">
+</button>
+</section>
+
+<section id="slide4">
+
+  <button id="backBtn">←</button>
+
+  <div id="lettersContainer"></div>
+
+  <button id="addLetterBtn">+</button>
+
+</section>
+
+<section id="letterForm">
+
+  <button id="closeFormBtn">←</button>
+
+  <form id="sendLetterForm">
+
+    <input
+      type="text"
+      id="senderName"
+      placeholder="Your name"
+      required
+    >
+
+    <textarea
+      id="letterMessage"
+      placeholder="Write your message..."
+      required
+    ></textarea>
+
+    <button type="submit">
+      Send
+    </button>
+
+  </form>
+
+</section>
+
+<div id="popupLetter">
+
+  <div class="popup-content">
+
+    <h2 id="popupName"></h2>
+
+    <p id="popupMessage"></p>
+
+    <button id="closePopupBtn">
+      Tutup
+    </button>
+
+  </div>
+
+</div>
+
+<div id="successPopup">
+
+  <div class="success-box">
+
+    <div class="success-icon">
+      💌
+    </div>
+
+    <h2>Surat berhasil dikirim!</h2>
+
+    <p>
+      Terima kasih sudah meninggalkan
+      ucapan terbaik untuk kami 🤍
+    </p>
+
+    <button id="successBtn">
+      Oke 💖
+    </button>
+
+  </div>
+
+</div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

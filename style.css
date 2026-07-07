@@ -1,0 +1,354 @@
+body {
+  margin: 0;
+}
+
+#slide1 {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("images/slide1-bg.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#addStickerBtn {
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 24px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(5px);
+}
+
+#stickerPicker {
+  position: absolute;
+  bottom: 110px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.pick-sticker {
+  width: 16vw;
+  max-width: 70px;
+  min-width: 45px;
+  cursor: pointer;
+}
+
+.sticker {
+  width: 18vw;
+  max-width: 80px;
+  min-width: 45px;
+  position: absolute;
+  animation: pop .3s ease;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+#slide2 {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("images/slide2-bg.png");
+  background-size: 98% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+#playBtn {
+  position: absolute;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  width: 13%;
+  height: 10%;
+
+  right: 12%;
+  top: 48%;
+}
+
+.hidden-page {
+  display: none;
+}
+
+#slide3,
+#slide4,
+#letterForm {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+#slide3 {
+  position: relative;
+  background-image: url("images/slide3-bg.png");
+}
+
+#openLettersBtn {
+  position: absolute;
+
+  width: 50%;
+  height: 20%;
+  left: 25%;
+  top: 67%;
+
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+
+  cursor: pointer;
+  z-index: 100;
+}
+
+#openLettersBtn:focus,
+#openLettersBtn:active {
+  outline: none;
+  border: none;
+}
+
+#slide4 {
+  position: fixed;
+  inset: 0;
+
+  width: 100vw;
+  height: 100dvh;
+
+  background-image: url("images/slide4-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat:no-repeat;
+
+  z-index: 999;
+
+  display: none;
+
+  overflow:hidden;
+}
+
+#letterForm {
+  position: fixed;
+  inset: 0;
+  display: none;
+
+  background-image: url("images/letter-form-bg.png");
+  background-size: cover;
+  background-position: center;
+  z-index: 1000;
+}
+
+#senderName {
+  position: absolute;
+  top: 35%;
+  left: 15%;
+  width: 70%;
+}
+
+#letterMessage {
+  position: absolute;
+  top: 45%;
+  left: 15%;
+  width: 70%;
+  height: 120px;
+  resize: none;
+}
+
+#sendLetterForm button[type="submit"] {
+  position: absolute;
+  top: 68%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#sendLetterForm {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#addLetterBtn {
+  position: absolute;
+  right: 30px;
+  bottom: 40px;
+
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+#backBtn {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+
+  background: transparent;
+  border: none;
+
+  z-index: 1001;
+}
+
+#lettersContainer{
+
+    position:absolute;
+
+    top:30%;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:88%;
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:10px;
+
+}
+
+#closeFormBtn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1001;
+
+  background: transparent;
+  border: none;
+}
+
+.envelope {
+  width: 90px;
+  height: 90px;
+
+  background-image: url("images/envelope.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  cursor: pointer;
+}
+
+.letter-item{
+
+    flex:1 1 calc(20% - 10px);
+
+    max-width:90px;
+
+    text-align:center;
+
+}
+
+.letter-name {
+  color: #e9b4ca;
+  font-size: 14px;
+  margin-bottom: -30px;
+  text-align: center;
+}
+
+.letter-envelope{
+    width:100%;
+    max-width:90px;
+}
+
+#popupLetter {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.5);
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 9999;
+}
+
+.popup-content {
+  width: 90%;
+  max-width: 350px;
+
+  background: white;
+  padding: 30px;
+
+  border-radius: 25px;
+  text-align: center;
+}
+
+.popup-content h2 {
+  color: #ff5c9f;
+  margin-bottom: 20px;
+}
+
+.popup-content p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.popup-content button {
+  border: none;
+  background: #ff5c9f;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 20px;
+}
+
+#successPopup {
+  position: fixed;
+  inset: 0;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(0,0,0,.45);
+
+  z-index: 99999;
+}
+
+.success-box {
+  width: 90%;
+  max-width: 330px;
+
+  background: white;
+  border-radius: 25px;
+  padding: 30px;
+  text-align: center;
+}
+
+.success-icon {
+  font-size: 55px;
+  margin-bottom: 10px;
+}
+
+#successBtn {
+  border: none;
+  background: #f56aa5;
+  color: white;
+  padding: 14px 30px;
+  border-radius: 999px;
+}
